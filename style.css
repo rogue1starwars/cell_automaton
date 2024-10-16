@@ -1,0 +1,18 @@
+.container {
+  width: 70vw;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0px;
+}
+
+.cell {
+  height: 6vw;
+  width: 6vw;
+}
+
+h1 {
+  text-align: center;
+}
