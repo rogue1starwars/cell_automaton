@@ -1,7 +1,10 @@
-const N = 10;
+const N = 180;
 let rule = 30;
 
-const previous = ["0", "0", "0", "0", "1", "1", "0", "0", "0", "0"];
+const previous = [];
+for (let i = 0; i < N; i++) {
+  i == N / 2 ? previous.push("1") : previous.push("0");
+}
 const current = [];
 
 function cell_automaton(pattern, rule) {
@@ -34,6 +37,18 @@ function updateUI() {
   for (let j = 0; j < N; j++) {
     previous[j] = current[j];
   }
+  window.scrollTo(0, document.body.scrollHeight);
 }
 
-setInterval(updateUI, 1000);
+let intervalId = setInterval(updateUI, 100);
+
+const startButton = document.getElementById("startButton");
+let toggle = true;
+startButton.addEventListener("click", () => {
+  if (toggle) {
+    clearInterval(intervalId);
+  } else {
+    intervalId = setInterval(updateUI, 100);
+  }
+  toggle = !toggle;
+});

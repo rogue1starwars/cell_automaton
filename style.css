@@ -4,15 +4,22 @@
 
 .row {
   display: flex;
-  justify-content: space-around;
-  margin: 10px 0px;
+  justify-content: center;
 }
 
 .cell {
-  height: 6vw;
-  width: 6vw;
+  height: 0.5vw;
+  width: 0.5vw;
 }
 
 h1 {
   text-align: center;
+}
+
+#startButton {
+  position: fixed;
+  top: 10px;
+  padding: 10px;
+  background-color: red;
+  color: white;
 }
