@@ -8,7 +8,20 @@
     <!-- <h1>Cell Automaton</h1>
     <label>Rule: <input type="number" id="ruleInput" /></label>
     <label>Initial: <input type="text" id="amountInput" /></label> -->
-    <button id="startButton">ON/OFF (Reload page to reset)</button>
+    <div class="buttons-container">
+      <button id="startButton" class="custom-button">
+        ON/OFF (Reload page to reset)
+      </button>
+      <br />
+      <input
+        inputmode="numeric"
+        type="number"
+        id="ruleInput"
+        placeholder="Rule: 0-255"
+      />
+      <br />
+      <button id="ruleButton" class="custom-button">Change Rule</button>
+    </div>
     <div id="container"></div>
     <script src="script.js"></script>
   </body>
