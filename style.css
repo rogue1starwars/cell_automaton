@@ -8,18 +8,33 @@
 }
 
 .cell {
-  height: 0.5vw;
-  width: 0.5vw;
+  height: 0.3vw;
+  width: 0.3vw;
 }
 
 h1 {
   text-align: center;
 }
 
-#startButton {
+.buttons-container {
   position: fixed;
   top: 10px;
+  left: 10px;
+}
+
+#ruleInput {
   padding: 10px;
-  background-color: red;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.custom-button {
+  padding: 10px;
+  margin: 10px;
+  background-color: #4caf50;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
