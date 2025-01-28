@@ -1,9 +1,7 @@
 // Set initial rules and pattern
 const N = 300;
 const color = 3;
-// let rule = 2442342343423;
-// let rule = 1442342342423423;
-let rule = 1442442000000744;
+let rule = 2442342343;
 let ruleTmp = rule;
 const one_side_rule = rule.toString(2).slice(-1)[0];
 
@@ -180,10 +178,11 @@ ruleInput.addEventListener("input", () => {
 
 const ruleButton = document.getElementById("ruleButton");
 ruleButton.addEventListener("click", () => {
-  if (ruleTmp < 0 || ruleTmp > 255) {
+  if (ruleTmp < 0 || ruleTmp > 10e13) {
     alert("Invalid rule");
     return;
   }
+  console.log(ruleTmp);
   rule = ruleTmp;
   clearInterval(intervalId);
   init();
